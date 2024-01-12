@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-Game</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav>
+        <ul>
+          <li id="signIn"><a href="signIn.html" class="mail"></a> sign in</li>
+          <li id="logIn"><a href="signup.html" class="mail"></a>log in</li>
+        </ul>
+      </nav>
+      <div class="description">
+        <h1>
+          Welcome to Web Dev Quiz, the challenge for budding web developers and
+          coding , this exciting quiz game designed to push your coding skills
+        </h1>
+      </div>
+      <div id="form-box">
+        <form>
+          <select id="language">
+            <option value="HTML" selected="selected">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JS">Javascript</option>
+          </select>
+
+          <a href="#lb3" class="choose-lang">Test Skills</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="quiz">
+      <div id="info">
+        <div id="score"></div>
+        <div id="ques-left"></div>
+      </div>
+      <div id="ques-view">
+        <div>
+          <h3>remmeber to relax</h3>
+        </div>
+      </div>
+      <div class="question">
+        <div>
+          <h1>Question</h1>
+        </div>
+      </div>
+
+      <div class="choice">
+        <div class="options">
+          <input type="radio" name="options" value="option1" id="opt0" /><label
+            for="opt0"
+            id="lb0"
+            >Option1</label
+          >
+        </div>
+        <div class="options">
+          <input type="radio" name="options" value="option2" id="opt1" /><label
+            for="opt1"
+            id="lb1"
+            >Option2</label
+          >
+        </div>
+        <div class="options">
+          <input
+            type="radio"
+            name="options"
+            value="option3"
+            checked="checked"
+            id="opt2"
+          /><label for="opt2" id="lb2">Option3</label>
+        </div>
+        <div class="options">
+          <input type="radio" name="options" value="option4" id="opt3" /><label
+            for="opt3"
+            id="lb3"
+            >Option4</label
+          >
+        </div>
+      </div>
+
+      <div class="ans">
+        <button type="button" class="submit-answer">Submit Answer</button>
+        <a href="#display-final-score" type="button" class="results"
+          >View Results</a
+        >
+      </div>
+    </div>
+
+    <div class="final">
+      <h1>Results</h1>
+
+      <div class="solved"></div>
+      <div class="right-wrong"></div>
+
+      <div id="display-score"></div>
+
+      <button id="restart">Reset-Quizz</button>
+    </div>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/jq.js"></script>
+    <script src="../JS/signlogin.js"></script>
+  </body>
+</html>
