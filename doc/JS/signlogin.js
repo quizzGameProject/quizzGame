@@ -34,3 +34,13 @@ function signIn() {
     console.log("Sign-in failed.");
   }
 }
+
+$(document).ready(function () {
+  $("#signIn").click(function () {
+    window.location.href = "signIn.html";
+  });
+
+  $("#logIn").click(function () {
+    window.location.href = "signup.html";
+  });
+});
