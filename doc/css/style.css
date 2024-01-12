@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://www.bourges-stargames.fr/img/partenaire/partenaire_6.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background-color: #8100a1;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    display: inline;
+}
+
+.fullBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #8100a1;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: none;
+}
