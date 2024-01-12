@@ -25,6 +25,47 @@ $(document).ready(function () {
       
     }
     });
+
+    $('.submit-answer').click(function () {
+      if ($('input[name="options"]:checked').val() === window[lang][countQues].choices[window[lang][countQues].answer - 1]) {
+        score += 1;
+        console.log(score)
+        $('#score').text('Score : ' + score);
+        $('#ques-view').append('<div class="ques-circle correct">' + (countQues + 1) + '</div>');
+      } 
+
+
+
+      else{
+        score -= 1;
+        console.log(score)
+        $('#score').text('Score : ' + score);
+        $('#ques-view').append('<div class="ques-circle incorrect">' + (countQues + 1) + '</div>');
+      }
+  
+      if (countQues < window[lang].length - 1) {
+        countQues++;
+      } 
+      
+      else {
+        $('.submit-answer').hide();
+        $('.view-results').show();
+      }
+  
+      $('#ques-left').text('Question : ' + (countQues + 1) + '/' + window[lang].length);
+      $('.question').html('<h1>' + window[lang][countQues].question + '</h1>');
+      
+      
+      for (var i = 0; i <= 3; i++) {
+        $('#opt' + i).val(window[lang][countQues].choices[i]);
+        $('#lb' + i).html(window[lang][countQues].choices[i]);
+      }
+    });
+
+
+
+
+
   
     
 
