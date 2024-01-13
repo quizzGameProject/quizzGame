@@ -32,6 +32,7 @@ function signIn() {
     window.location.href = "../html/index.html";
   } else {
     console.log("Sign-in failed.");
+    alert("Sign-in failed.")
   }
 }
 

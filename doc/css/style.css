@@ -254,9 +254,11 @@ nav li{
     font-size: 90%;
 }
 
-.discription{
+.description{
     position: relative;
-    top: 120px;
+    top: 100px;
+    text-align: center;
+    
 }
 
 
