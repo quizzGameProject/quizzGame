@@ -18,6 +18,21 @@ function SignUp() {
   localStorage.setItem("user", JSON.stringify(user));
 }
 
+if(localStorage.getItem('user')!==null){
+$(".hiden").hide()
+
+}
+else{
+  $(".log").hide()
+}
+
+
+
+
+
+
+
+
 function signIn() {
   var enteredEmail = document.getElementById("email").value;
   var enteredPassword = document.getElementById("psw").value;
@@ -32,6 +47,7 @@ function signIn() {
     window.location.href = "../html/index.html";
   } else {
     console.log("Sign-in failed.");
+    alert("Sign-in failed.")
   }
 }
 
@@ -44,3 +60,13 @@ $(document).ready(function () {
     window.location.href = "signup.html";
   });
 });
+
+
+$(".log").click(function(){
+  localStorage.clear()
+  $(".hiden").show()
+  $(".log").hide()
+
+})
+
+
