@@ -22,92 +22,72 @@
           <li id="logIn"><a href="signup.html" class="mail"></a>log in</li>
         </ul>
       </nav>
-      <div class="description">
+      <div class="discription">
         <h1>
-          Welcome to Web Dev Quiz, the challenge for budding web developers and
-          coding , this exciting quiz game designed to push your coding skills
+            Welcome to Web Dev  Quiz, the  challenge for budding web developers and coding , this exciting quiz game designed to push your coding skills 
         </h1>
-      </div>
-      <div id="form-box">
+                </div>   
+    <div id="form-box">
+        
+           
+        
         <form>
-          <select id="language">
-            <option value="HTML" selected="selected">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JS">Javascript</option>
-          </select>
+            <select id="language">
+                
+                <option  value="HTML"selected="selected">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">Javascript</option>
+                </select> 
+                
+            <a href="#lb3" class="choose-lang">Test Skills</a>
+            </form>
+    </div> 
+    
+</div>
 
-          <a href="#lb3" class="choose-lang">Test Skills</a>
-        </form>
-      </div>
-    </div>
-
-    <div class="quiz">
-      <div id="info">
+<div class="quiz">
+    
+    <div id="info">
         <div id="score"></div>
         <div id="ques-left"></div>
-      </div>
-      <div id="ques-view">
+    </div>
+    <div id="ques-view">
+       <div>
+        <h3>remmeber to relax</h3>
+       </div>
+    </div>
+    <div class="question">
         <div>
-          <h3>remmeber to relax</h3>
-        </div>
-      </div>
-      <div class="question">
-        <div>
-          <h1>Question</h1>
-        </div>
-      </div>
+    <h1>Question</h1>
+</div>
+    </div>
+    
+    <div class="choice">
+        <div class="options"><input type="radio" name="options" value="option1" id="opt0"><label for="opt0" id="lb0">Option1</label></div>
+        <div class="options"><input type="radio" name="options" value="option2" id="opt1"><label for="opt1" id="lb1">Option2</label></div>
+        <div class="options"><input type="radio" name="options" value="option3" checked="checked" id="opt2"><label for="opt2" id="lb2">Option3</label></div>
+        <div class="options"><input type="radio" name="options" value="option4" id="opt3"><label for="opt3" id="lb3">Option4</label></div>   
+    </div>
 
-      <div class="choice">
-        <div class="options">
-          <input type="radio" name="options" value="option1" id="opt0" /><label
-            for="opt0"
-            id="lb0"
-            >Option1</label
-          >
-        </div>
-        <div class="options">
-          <input type="radio" name="options" value="option2" id="opt1" /><label
-            for="opt1"
-            id="lb1"
-            >Option2</label
-          >
-        </div>
-        <div class="options">
-          <input
-            type="radio"
-            name="options"
-            value="option3"
-            checked="checked"
-            id="opt2"
-          /><label for="opt2" id="lb2">Option3</label>
-        </div>
-        <div class="options">
-          <input type="radio" name="options" value="option4" id="opt3" /><label
-            for="opt3"
-            id="lb3"
-            >Option4</label
-          >
-        </div>
-      </div>
-
-      <div class="ans">
+     <div class="ans-btn">
         <button type="button" class="submit-answer">Submit Answer</button>
-        <a href="#display-score" type="button" class="results"
-          >View Results</a
-        >
-      </div>
+         <a href="#display-final-score" type="button" class="view-results">View Results</a>
     </div>
 
-    <div class="final">
-      <h1>Results</h1>
+</div>
 
-      <div class="solved"></div>
-      <div class="right-wrong"></div>
+<div class="final-result">
+    <h1 class="head1">Results </h1>
 
-      <div id="display-score"></div>
+    <div class="solved-ques-no"></div>
+    <div class="right-wrong"></div>
+    
+    <div id="display-final-score"></div>
+    
+    <button id="restart">Reset-Quizz</button>        
+</div>
 
-      <button id="restart">Reset-Quizz</button>
-    </div>
+
     <script src="../JS/main.js"></script>
     <script src="../JS/jq.js"></script>
     <script src="../JS/signlogin.js"></script>

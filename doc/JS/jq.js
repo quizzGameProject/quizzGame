@@ -5,17 +5,17 @@ $(document).ready(function () {
 
   $("#score").text("Score : " + 0);
   $(".view-results").hide();
-  $(".quiz, .final").hide();
+  $(".quiz, .final-result").hide();
 
   $(".choose-lang").click(function () {
     lang = $("#language").val() + "questions";
-
     $("#ques-left").text(
       "Question : " + (countQues + 1) + "/" + window[lang].length
     );
-    $(".quiz").show();
-    $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
 
+    $(".quiz").show();
+
+    $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
     for (var i = 0; i <= 3; i++) {
       $("#opt" + i).val(window[lang][countQues].choices[i]);
       $("#lb" + i).html(window[lang][countQues].choices[i]);
@@ -46,23 +46,23 @@ $(document).ready(function () {
       countQues++;
     } else {
       $(".submit-answer").hide();
-      $(".choose-lang").show();
+      $(".view-results").show();
     }
 
     $("#ques-left").text(
       "Question : " + (countQues + 1) + "/" + window[lang].length
     );
     $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
-
     for (var i = 0; i <= 3; i++) {
       $("#opt" + i).val(window[lang][countQues].choices[i]);
       $("#lb" + i).html(window[lang][countQues].choices[i]);
     }
   });
 
-  $(".choose-lang").click(function () {
-    $(".final").show();
-    $(".solved").html(
+  $(".view-results").click(function () {
+    $(".final-result").show();
+
+    $(".solved-ques-no").html(
       "You Solved " + (countQues + 1) + " questions of " + $("#language").val()
     );
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
     $(".right-wrong").html(
       correct + " were Right and " + (countQues + 1 - correct) + " were Wrong"
     );
-    $("#display-score").html("Your Final Score is: " + score);
+    $("#display-final-score").html("Your Final Score is: " + score);
   });
 
   $("#restart").click(function () {
@@ -79,34 +79,13 @@ $(document).ready(function () {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).on("click", 'a[href^="#"]', function (event) {
   event.preventDefault();
 
-  var target = $($.attr(this, "href"));
-
-  if (target.length) {
-    $("html, body").animate(
-      {
-        scrollTop: target.offset().top,
-      },
-      1000
-    );
-  }
+  $("html, body").animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top,
+    },
+    600
+  );
 });
-
-
-// scroling demention with dely .on with 3 params contain callBack :)
