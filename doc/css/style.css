@@ -95,7 +95,7 @@ nav li{
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url();
     background-color: #fff;
     text-align: center;
-/*    padding: 0%;*/
+    padding: 0%;
     margin-top: 20px;
     height: 100vh;
 }
@@ -171,7 +171,7 @@ nav li{
      float: left;
 }
 
-.ans-btn{
+.ans{
     background-color: #fff;
     padding: 2%;
 }
@@ -222,9 +222,21 @@ nav li{
     font-size: 1.5em;
     height: 100vh;
 }
-.solved-ques-no{
+
+
+
+.solved{
     padding: 10px;
 }
+
+#display-score{
+    padding: 5%;
+}
+/* attention slayem  */
+
+
+
+
 
 .right-wrong{
     padding: 10px;
@@ -258,5 +270,8 @@ nav li{
     position: relative;
     top: 120px;
 }
+
+
+
 
 

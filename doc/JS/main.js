@@ -1,6 +1,6 @@
 
 
-function Create(question, choices, answer) {
+function Create(question, choices, answer) {// this class generate all the inst in jq mechanizmm ;)
     var obj = {};
     obj.question = question;
     obj.choices = choices;

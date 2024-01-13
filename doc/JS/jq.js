@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   $("#score").text("Score : " + 0);
   $(".view-results").hide();
-  $(".quiz, .final-result").hide();
+  $(".quiz, .final").hide();
 
   $(".choose-lang").click(function () {
     lang = $("#language").val() + "questions";
@@ -46,7 +46,7 @@ $(document).ready(function () {
       countQues++;
     } else {
       $(".submit-answer").hide();
-      $(".view-results").show();
+      $(".choose-lang").show();
     }
 
     $("#ques-left").text(
@@ -60,9 +60,9 @@ $(document).ready(function () {
     }
   });
 
-  $(".view-results").click(function () {
-    $(".final-result").show();
-    $(".solved-ques-no").html(
+  $(".choose-lang").click(function () {
+    $(".final").show();
+    $(".solved").html(
       "You Solved " + (countQues + 1) + " questions of " + $("#language").val()
     );
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
     $(".right-wrong").html(
       correct + " were Right and " + (countQues + 1 - correct) + " were Wrong"
     );
-    $("#display-final-score").html("Your Final Score is: " + score);
+    $("#display-score").html("Your Final Score is: " + score);
   });
 
   $("#restart").click(function () {
@@ -79,15 +79,34 @@ $(document).ready(function () {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).on("click", 'a[href^="#"]', function (event) {
   event.preventDefault();
 
-  $("html, body").animate(
-    {
-      scrollTop: $($.attr(this, "href")).offset().top, //
-    },
-    1000
-  );
+  var target = $($.attr(this, "href"));
+
+  if (target.length) {
+    $("html, body").animate(
+      {
+        scrollTop: target.offset().top,
+      },
+      1000
+    );
+  }
 });
+
 
 // scroling demention with dely .on with 3 params contain callBack :)
