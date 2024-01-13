@@ -26,14 +26,17 @@ nav li{
     cursor: pointer;
 }
 #signIn{
+    color:  #c48e59;
     cursor: pointer;
 }
 #logIn{
+    color:  #c48e59;
     cursor: pointer;
 }
 
+
 #wrapper{
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url();
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(/images/quiztime.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -85,7 +88,7 @@ nav li{
 }
 
 #language option{
-    background-color: #fff;
+    background-color: #fff700;
     
 }
 .color{
@@ -102,7 +105,10 @@ nav li{
 
 #info{
     height:25px;
-    background-color: #fff;
+    background-color: #c34dca;
+}
+h1{
+    color: #c34dca ;
 }
 
 #score{
@@ -142,20 +148,20 @@ nav li{
 }
 
 .question{
-    background-color: antiquewhite;
+    background-color: rgb(156, 105, 38);
     font-family: 'Roboto Slab', sans-serif;
     letter-spacing: .13em;
 }
 
 .choice{
-    background-color: #fff;
+    background-color :#fff700;;
     padding: 3%;
 
 }
 
 
 .options{
-    background-color: #fff;
+    background-color: #7fbd45;
     display:block;
     margin-left: 13%;
     font-size: 25px;
@@ -172,7 +178,7 @@ nav li{
 }
 
 .ans-btn{
-    background-color: #fff;
+    background-color: #1cba6b;
     padding: 2%;
 }
 
@@ -216,21 +222,27 @@ nav li{
 /*Final Results*/
 
 .final-result{
-    background-color: #fff;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(/images/cover.jpg);
     text-align: center;
     padding: 10px;
     font-size: 1.5em;
     height: 100vh;
 }
 .solved-ques-no{
+    color: #fff700;
     padding: 10px;
+}
+.head1{
+    color: #fff700 ;
 }
 
 .right-wrong{
+    color: #fff700;
     padding: 10px;
 }
 
 #display-final-score{
+    color: #fff700;
     padding: 5%;
 }
 .remark{
@@ -255,6 +267,7 @@ nav li{
 }
 
 .discription{
+    color:  #c34dca;
     position: relative;
     top: 120px;
 }

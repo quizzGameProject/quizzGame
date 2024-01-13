@@ -9,13 +9,13 @@ $(document).ready(function () {
 
   $(".choose-lang").click(function () {
     lang = $("#language").val() + "questions";
-
     $("#ques-left").text(
       "Question : " + (countQues + 1) + "/" + window[lang].length
     );
-    $(".quiz").show();
-    $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
 
+    $(".quiz").show();
+
+    $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
     for (var i = 0; i <= 3; i++) {
       $("#opt" + i).val(window[lang][countQues].choices[i]);
       $("#lb" + i).html(window[lang][countQues].choices[i]);
@@ -53,7 +53,6 @@ $(document).ready(function () {
       "Question : " + (countQues + 1) + "/" + window[lang].length
     );
     $(".question").html("<h1>" + window[lang][countQues].question + "</h1>");
-
     for (var i = 0; i <= 3; i++) {
       $("#opt" + i).val(window[lang][countQues].choices[i]);
       $("#lb" + i).html(window[lang][countQues].choices[i]);
@@ -62,6 +61,7 @@ $(document).ready(function () {
 
   $(".view-results").click(function () {
     $(".final-result").show();
+
     $(".solved-ques-no").html(
       "You Solved " + (countQues + 1) + " questions of " + $("#language").val()
     );
@@ -84,10 +84,8 @@ $(document).on("click", 'a[href^="#"]', function (event) {
 
   $("html, body").animate(
     {
-      scrollTop: $($.attr(this, "href")).offset().top, //
+      scrollTop: $($.attr(this, "href")).offset().top,
     },
-    1000
+    600
   );
 });
-
-// scroling demention with dely .on with 3 params contain callBack :)
